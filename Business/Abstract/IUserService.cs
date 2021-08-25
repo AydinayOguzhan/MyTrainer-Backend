@@ -8,8 +8,8 @@ namespace Business.Abstract
 {
     public interface IUserService
     {
-        List<OperationClaim> GetClaims(User user);
-        void Add(User user);
-        User GetByMail(string email);
+        List<OperationClaim> GetClaims(BaseUser user);
+        void Add(BaseUser user);
+        BaseUser GetByMail(string email);
     }
 }

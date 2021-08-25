@@ -17,17 +17,17 @@ namespace Business.Concrete
             _userDal = userDal;
         }
 
-        public List<OperationClaim> GetClaims(User user)
+        public List<OperationClaim> GetClaims(BaseUser user)
         {
             return _userDal.GetClaims(user);
         }
 
-        public void Add(User user)
+        public void Add(BaseUser user)
         {
             _userDal.Add(user);
         }
 
-        public User GetByMail(string email)
+        public BaseUser GetByMail(string email)
         {
             return _userDal.Get(u => u.Email == email);
         }
